@@ -1,12 +1,10 @@
-﻿<#
+﻿using module ../FreeMobile.psd1
+
+<#
 .SYNOPSIS
 	Tests the features of the `Send-Message` cmdlet.
 #>
 Describe "Send-Message" {
-	BeforeAll {
-		Import-Module "$PSScriptRoot/../FreeMobile.psd1"
-	}
-
 	It "should throw an exception if a network error occurred" {
 		$credential = [pscredential]::new("anonymous", (ConvertTo-SecureString "secret" -AsPlainText))
 		{ "Hello World!" | Send-FreeMobileMessage -Credential $credential -Uri "http://localhost:666" -ErrorAction Stop } | Should -Throw
