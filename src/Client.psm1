@@ -37,6 +37,30 @@ class Client {
 	<#
 	.SYNOPSIS
 		Creates a new client.
+	.PARAMETER Credential
+		The Free Mobile user name and password.
+	#>
+	Client([pscredential] $Credential) {
+		$this.BaseUrl = "https://smsapi.free-mobile.fr/"
+		$this.Credential = $Credential
+	}
+
+	<#
+	.SYNOPSIS
+		Creates a new client.
+	.PARAMETER Credential
+		The Free Mobile user name and password.
+	.PARAMETER BaseUrl
+		The base URL of the remote API endpoint.
+	#>
+	Client([pscredential] $Credential, [uri] $BaseUrl) {
+		$this.BaseUrl = $BaseUrl
+		$this.Credential = $Credential
+	}
+
+	<#
+	.SYNOPSIS
+		Creates a new client.
 	.PARAMETER UserName
 		The Free Mobile user name.
 	.PARAMETER Password
@@ -60,30 +84,6 @@ class Client {
 	Client([string] $UserName, [securestring] $Password, [uri] $BaseUrl) {
 		$this.BaseUrl = $BaseUrl
 		$this.Credential = [pscredential]::new($UserName, $Password)
-	}
-
-	<#
-	.SYNOPSIS
-		Creates a new client.
-	.PARAMETER Credential
-		The Free Mobile user name and password.
-	#>
-	Client([pscredential] $Credential) {
-		$this.BaseUrl = "https://smsapi.free-mobile.fr/"
-		$this.Credential = $Credential
-	}
-
-	<#
-	.SYNOPSIS
-		Creates a new client.
-	.PARAMETER Credential
-		The Free Mobile user name and password.
-	.PARAMETER BaseUrl
-		The base URL of the remote API endpoint.
-	#>
-	Client([pscredential] $Credential, [uri] $BaseUrl) {
-		$this.BaseUrl = $BaseUrl
-		$this.Credential = $Credential
 	}
 
 	<#
