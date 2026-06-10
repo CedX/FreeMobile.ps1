@@ -2,9 +2,9 @@
 
 <#
 .SYNOPSIS
-	Tests the features of the `Send-FreeMobileMessage` cmdlet.
+	Tests the features of the `Send-Message` cmdlet.
 #>
-Describe "Send-FreeMobileMessage" {
+Describe "Send-Message" {
 	It "should throw an exception if a network error occurred" {
 		$credential = [pscredential]::new("anonymous", (ConvertTo-SecureString "secret" -AsPlainText))
 		{ "Hello World!" | Send-FreeMobileMessage -Credential $credential -Uri "http://localhost:666" -ErrorAction Stop } | Should -Throw
