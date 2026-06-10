@@ -1,4 +1,5 @@
 @{
+	DefaultCommandPrefix = "FreeMobile"
 	ModuleVersion = "1.1.0"
 	PowerShellVersion = "7.6"
 	RootModule = "Sources/Main.psm1"
@@ -15,8 +16,8 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
-		"New-FreeMobileClient"
-		"Send-FreeMobileMessage"
+		"New-Client"
+		"Send-Message"
 	)
 
 	PrivateData = @{
