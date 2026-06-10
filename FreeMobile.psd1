@@ -12,13 +12,9 @@
 
 	AliasesToExport = @()
 	CmdletsToExport = @()
+	FunctionsToExport = "New-Client", "Send-Message"
 	RequiredAssemblies = , "Binaries/Belin.FreeMobile.dll"
 	VariablesToExport = @()
-
-	FunctionsToExport = @(
-		"New-Client"
-		"Send-Message"
-	)
 
 	PrivateData = @{
 		PSData = @{
