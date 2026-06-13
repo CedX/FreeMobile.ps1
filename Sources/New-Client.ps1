@@ -22,7 +22,7 @@ using namespace System.Management.Automation
 function New-Client {
 	[CmdletBinding()]
 	[OutputType([Belin.FreeMobile.Client])]
-	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions")]
+	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		# The Free Mobile user name and password.
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
