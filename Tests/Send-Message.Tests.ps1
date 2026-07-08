@@ -12,11 +12,11 @@ Describe "Send-Message" {
 
 	It "should throw an exception if the credentials are invalid" {
 		$credential = [pscredential]::new("anonymous", (ConvertTo-SecureString "secret" -AsPlainText))
-		Should-Throw -ScriptBlock{ "Hello World!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop }
+		Should-Throw -ScriptBlock { "Hello World!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop }
 	}
 
 	It "should send SMS messages if the credentials are valid" {
 		$credential = [pscredential]::new($Env:FREEMOBILE_ACCOUNT, (ConvertTo-SecureString $Env:FREEMOBILE_API_KEY -AsPlainText))
-		{ "Hello Cédric, from PowerShell!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop } | Should -Not -Throw
+		& { "Hello Cédric, from PowerShell!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop } | Out-Null
 	}
 }
