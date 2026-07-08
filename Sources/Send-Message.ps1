@@ -13,7 +13,7 @@ function Send-Message {
 	[OutputType([void])]
 	param (
 		# The message text.
-		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
+		[Parameter(Mandatory, Position = 1, ValueFromPipeline)]
 		[string] $Message,
 
 		# The Free Mobile client to use.

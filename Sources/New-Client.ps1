@@ -25,7 +25,7 @@ function New-Client {
 	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		# The Free Mobile user name and password.
-		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
+		[Parameter(Mandatory, Position = 1, ValueFromPipeline)]
 		[Credential()]
 		[pscredential] $Credential,
 
