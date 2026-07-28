@@ -34,6 +34,7 @@ function New-Client {
 		[string] $UserAgent = "PowerShell/$($PSVersionTable.PSVersion) | Belin.FreeMobile/$Script:Version",
 
 		# The base URL of the remote API endpoint.
+		[ValidateNotNull()]
 		[uri] $Uri = "https://smsapi.free-mobile.fr/"
 	)
 

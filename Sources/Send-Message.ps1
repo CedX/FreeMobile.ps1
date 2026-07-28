@@ -27,6 +27,7 @@ function Send-Message {
 
 		# The base URL of the remote API endpoint.
 		[Parameter(ParameterSetName = "Credential")]
+		[ValidateNotNull()]
 		[uri] $Uri = "https://smsapi.free-mobile.fr/"
 	)
 
