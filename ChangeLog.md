@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [2.0.1](https://github.com/CedX/FreeMobile.ps1/compare/v2.0.0...v2.0.1)
+- Optimized the packaging.
+
 ## Version [2.0.0](https://github.com/CedX/FreeMobile.ps1/compare/v1.1.0...v2.0.0)
 - Added the `-UserAgent` parameter to the `New-Client` cmdlet.
 - Replaced the [PowerShell](https://learn.microsoft.com/en-us/powershell) classes by [C#](https://learn.microsoft.com/en-us/dotnet/csharp) classes.
