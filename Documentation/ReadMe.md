@@ -27,7 +27,7 @@ For detailed instructions, see the [installation guide](Installation.md).
 ## Usage
 This module provides the `Send-FreeMobileMessage` cmdlet, which allows you to send SMS notifications to your mobile phone:
 
-```pwsh
+```powershell
 using module Belin.FreeMobile
 
 $credential = [pscredential]::new("Your account identifier", (ConvertTo-SecureString "Your API key" -AsPlainText))

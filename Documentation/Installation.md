@@ -16,13 +16,13 @@ pwsh --version
 ### 1. Install it
 From a command prompt, run:
 
-```pwsh
+```powershell
 Install-PSResource Belin.FreeMobile -Repository PSGallery
 ```
 
 ### 2. Import it
 Now in your [PowerShell](https://learn.microsoft.com/en-us/powershell) code, you can use:
 
-```pwsh
+```powershell
 using module Belin.FreeMobile
 ```
