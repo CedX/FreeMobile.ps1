@@ -18,7 +18,7 @@ This will give you an identification key allowing access to the [Free Mobile](ht
 Install the latest version of **Free Mobile for PowerShell**
 with [PSResourceGet](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.psresourceget) package manager:
 
-```shell
+```powershell
 Install-PSResource Belin.FreeMobile
 ```
 
