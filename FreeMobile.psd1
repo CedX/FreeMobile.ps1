@@ -12,7 +12,7 @@
 
 	AliasesToExport = @()
 	CmdletsToExport = @()
-	FunctionsToExport = "New-Client", "Send-Message"
+	FunctionsToExport = "Close-Client", "New-Client", "Send-Message"
 	RequiredAssemblies = , "Binaries/Belin.FreeMobile.dll"
 	VariablesToExport = @()
 

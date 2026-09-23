@@ -14,6 +14,26 @@ using namespace System.Net.Http
 
 <#
 .SYNOPSIS
+	Releases the resources associated with the specified client.
+.INPUTS
+	The Free Mobile client to dispose.
+#>
+function Close-Client {
+	[CmdletBinding()]
+	[OutputType([void])]
+	param (
+		# The Free Mobile client to dispose.
+		[Parameter(Mandatory, Position = 1, ValueFromPipeline)]
+		[Client] $InputObject
+	)
+
+	process {
+		$InputObject.Dispose()
+	}
+}
+
+<#
+.SYNOPSIS
 	Creates a new Free Mobile client.
 .INPUTS
 	The Free Mobile user name and password.
