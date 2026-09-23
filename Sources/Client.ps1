@@ -104,4 +104,8 @@ function Send-Message {
 		try { $Client.SendMessage($Message) }
 		catch [HttpRequestException] { Write-Error $_ }
 	}
+
+	clean {
+		if ($PSCmdlet.ParameterSetName -ne "Client") { Close-Client $Client }
+	}
 }
