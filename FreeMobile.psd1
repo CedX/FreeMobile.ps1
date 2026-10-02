@@ -16,6 +16,10 @@
 	RequiredAssemblies = , "Binaries/Belin.FreeMobile.dll"
 	VariablesToExport = @()
 
+	RequiredModules = @(
+		@{ ModuleName = "Belin.FSharp"; ModuleVersion = "10.1.401" }
+	)
+
 	PrivateData = @{
 		PSData = @{
 			LicenseUri = "https://github.com/CedX/FreeMobile.ps1/blob/main/License.md"
