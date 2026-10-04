@@ -3,7 +3,7 @@
 ## Version [4.0.1](https://github.com/CedX/FreeMobile.ps1/compare/v4.0.0...v4.0.1)
 - Fixed a packaging issue.
 
-## Version [4.0.0](https://github.com/CedX/FreeMobile.ps1/compare/v3.0.0...v34.0.0)
+## Version [4.0.0](https://github.com/CedX/FreeMobile.ps1/compare/v3.0.0...v4.0.0)
 - Breaking change: removed the `-Uri` parameter from the `Send-Message` cmdlet.
 - Ported the cmdlets to [F#](https://learn.microsoft.com/en-us/dotnet/fsharp).
 
