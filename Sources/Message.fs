@@ -26,7 +26,7 @@ type SendMessageCommand() =
     if this.ParameterSetName = "Credential" then this.Client <- new Client((nonNull this.Credential).GetNetworkCredential())
 
   /// Performs clean-up after the command execution.
-  override this.EndProcessing (): unit =
+  override this.EndProcessing () =
     if this.ParameterSetName = "Credential" then (nonNull this.Client).Dispose()
 
   /// Performs execution of this command.
