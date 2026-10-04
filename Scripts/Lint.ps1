@@ -1,5 +1,7 @@
 using module PSScriptAnalyzer
+using module ./Cmdlets.psm1
 
 "Performing the static analysis of source code..."
-$PSScriptRoot, "Sources", "Tests" | Invoke-ScriptAnalyzer -ExcludeRule PSAvoidUsingConvertToSecureStringWithPlainText -Recurse
+Invoke-FSharpLint FreeMobile.slnx -Configuration Configuration/FSharpLint.json
+$PSScriptRoot, "Tests" | Invoke-ScriptAnalyzer -Recurse
 Test-ModuleManifest FreeMobile.psd1 | Out-Null
