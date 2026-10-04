@@ -7,12 +7,12 @@
 Describe "Send-Message" {
 	It "should throw an exception if a network error occurred" {
 		$credential = [pscredential]::new("anonymous", (ConvertTo-SecureString "secret" -AsPlainText))
-		Should-Throw -ScriptBlock { "Hello World!" | Send-FreeMobileMessage -Credential $credential -Uri "http://localhost:666" -ErrorAction Stop }
+		{ "Hello World!" | Send-FreeMobileMessage -Credential $credential -Uri "http://localhost:666" -ErrorAction Stop } | Should-Throw
 	}
 
 	It "should throw an exception if the credentials are invalid" {
 		$credential = [pscredential]::new("anonymous", (ConvertTo-SecureString "secret" -AsPlainText))
-		Should-Throw -ScriptBlock { "Hello World!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop }
+		{ "Hello World!" | Send-FreeMobileMessage -Credential $credential -ErrorAction Stop } | Should-Throw
 	}
 
 	It "should send SMS messages if the credentials are valid" {
