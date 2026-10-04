@@ -2,7 +2,7 @@
 	DefaultCommandPrefix = "FreeMobile"
 	ModuleVersion = "3.0.0"
 	PowerShellVersion = "7.6"
-	RootModule = "Sources/Main.psm1"
+	RootModule = "Binaries/Belin.FreeMobile.PowerShell.dll"
 
 	Author = "Cédric Belin <cedx@outlook.com>"
 	CompanyName = "Cedric-Belin.fr"
@@ -11,10 +11,15 @@
 	GUID = "8a16d600-a064-4037-9147-d13059c6abf7"
 
 	AliasesToExport = @()
-	CmdletsToExport = @()
-	FunctionsToExport = "Close-Client", "New-Client", "Send-Message"
+	FunctionsToExport = @()
 	RequiredAssemblies = , "Binaries/Belin.FreeMobile.dll"
 	VariablesToExport = @()
+
+	CmdletsToExport = @(
+		"Close-Client"
+		"New-Client"
+		"Send-Message"
+	)
 
 	RequiredModules = @(
 		@{ ModuleName = "Belin.FSharp"; ModuleVersion = "10.1.401" }
