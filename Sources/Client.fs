@@ -5,7 +5,7 @@ open System.Management.Automation
 
 /// Releases the resources associated with the specified client.
 [<Cmdlet(VerbsCommon.Close, "Client"); OutputType(typeof<Void>)>]
-type CloseClientCommand() =
+type CloseClient() =
   inherit Cmdlet()
 
   /// The Free Mobile client to dispose.
@@ -17,11 +17,11 @@ type CloseClientCommand() =
 
 /// Creates a new Free Mobile client.
 [<Cmdlet(VerbsCommon.New, "Client"); OutputType(typeof<Client>)>]
-type NewClientCommand() =
+type NewClient() =
   inherit Cmdlet()
 
   /// The assembly version.
-  static let version = SemanticVersion (typeof<NewClientCommand>.Assembly.GetName().Version)
+  static let version = SemanticVersion (typeof<NewClient>.Assembly.GetName().Version)
 
   /// The Free Mobile user name and password.
   [<Parameter(Mandatory = true, Position = 1, ValueFromPipeline = true); Credential>]

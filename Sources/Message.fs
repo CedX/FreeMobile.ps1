@@ -6,7 +6,7 @@ open System.Net.Http
 
 /// Sends an SMS message to the specified Free Mobile account.
 [<Cmdlet(VerbsCommunications.Send, "Message", DefaultParameterSetName = "Credential"); OutputType(typeof<Void>)>]
-type SendMessageCommand() =
+type SendMessage() =
   inherit PSCmdlet()
 
   /// The message text.
