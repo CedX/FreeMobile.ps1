@@ -10,7 +10,7 @@ type CloseClient() =
 
   /// The Free Mobile client to dispose.
   [<Parameter(Mandatory = true, Position = 1, ValueFromPipeline = true)>]
-  member val InputObject: Client | null = null with get, set
+  member val InputObject: Client|null = null with get, set
 
   /// Performs execution of this command.
   override this.ProcessRecord () = (nonNull this.InputObject).Dispose()
@@ -25,7 +25,7 @@ type NewClient() =
 
   /// The Free Mobile user name and password.
   [<Parameter(Mandatory = true, Position = 1, ValueFromPipeline = true); Credential>]
-  member val Credential: PSCredential | null = null with get, set
+  member val Credential: PSCredential|null = null with get, set
 
   /// The user agent string to use when making requests.
   [<Parameter; ValidateNotNullOrWhiteSpace>]

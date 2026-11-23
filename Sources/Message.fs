@@ -15,11 +15,11 @@ type SendMessage() =
 
   /// The Free Mobile client to use.
   [<Parameter(Mandatory = true, ParameterSetName = "Client")>]
-  member val Client: Client | null = null with get, set
+  member val Client: Client|null = null with get, set
 
   /// The Free Mobile user name and password.
   [<Parameter(Mandatory = true, ParameterSetName = "Credential"); Credential>]
-  member val Credential: PSCredential | null = null with get, set
+  member val Credential: PSCredential|null = null with get, set
 
   /// Performs initialization of the command execution.
   override this.BeginProcessing () =
